@@ -2,10 +2,16 @@
 
 Registro de evidencias del curso AZ-400. Click en el título de cada práctica para visitar su página de detalle con todas las capturas de la práctica.
 
+| Tipo   | Descripción                                |
+| ------ | ------------------------------------------ |
+| Lab 00 | [Validate Lab Environment](Documentos/lab00/lab00.md) |
+| Lab 01 | [Agile Planning and Portfolio Management with Azure Boards](Documentos/lab01/lab01.md) |
+
 ### Module 0 Welcome
-| Tipo  | Descripción                                |
-| ----- | ------------------------------------------ |
-| Lab | [Validate Lab Environment](Documentos/lab00/lab00.md) |
+| Tipo   | Descripción                                |
+| ------ | ------------------------------------------ |
+| Lab 00 | [Validate Lab Environment](Documentos/lab00/lab00.md) |
+
 
 ### Module 1 Planning for DevOps
 | Tipo  | Descripción                                |
