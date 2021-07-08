@@ -6,6 +6,17 @@ Registro de evidencias del curso AZ-400. Click en el título de cada práctica p
 | ------ | ------------------------------------------ |
 | Lab 00 | [Validate Lab Environment](Documentos/lab00/lab00.md) |
 | Lab 01 | [Agile Planning and Portfolio Management with Azure Boards](Documentos/lab01/lab01.md) |
+| Lab 02 | [Version controlling with Git in Azure Repos](Documentos/lab02/lab02.md) |
+| Lab 03 | [Sharing team knowledge using Azure project wikis](Documentos/lab03/lab03.md) |
+| Lab 04 | [Version controlling with Git in Azure Repos](Documentos/lab04/lab04.md) |
+| Lab 05 | [Configuring agent pools and understanding pipeline styles](Documentos/lab05/lab05.md) |
+| Lab 06a | [Enabling continuous integration with Azure Pipelines](Documentos/lab06/lab06a.md) |
+| Lab 06b | [Integrating external source control with Azure Pipelines](Documentos/lab06/lab06b.md) |
+| Lab 07 | [Integrating Azure Key Vault with Azure DevOps](Documentos/lab07/lab07.md) |
+| Lab 08 | [Implementing GitHub Actions by using DevOps Starter](Documentos/lab08/lab08.md) |
+| Lab 09 | [Package management with Azure Artifacts](Documentos/lab09/lab09.md) |
+| Lab 10a | [Controlling deployments using Release Gates](Documentos/lab10a/lab10a.md) |
+| Lab 10b | [Creating a release dashboard](Documentos/lab10a/lab10b.md) |
 
 ### Module 0 Welcome
 | Tipo   | Descripción                                |
@@ -21,13 +32,12 @@ Registro de evidencias del curso AZ-400. Click en el título de cada práctica p
 ### Module 2 Getting Started with Source Control
 | Tipo  | Descripción                                |
 | ----- | ------------------------------------------ |
-| Demo | [Create an HTTP trigger function by using the Azure portal](Documentos/Mod02/01demo-Create_an_HTTP_trigger_function_by_using_the_Azure_portal.md) |
-| Lab | [Implement task processing logic by using Azure Functions](Documentos/Mod02/02lab-Implement_task_processing_logic_by_using_Azure_Functions.md) |
+| Lab | [Version controlling with Git in Azure Repos](Documentos/lab02/lab02.md) |
 
 ### Module 3 Managing technical debt
 | Tipo  | Descripción                                |
 | ----- | ------------------------------------------ |
-| Lab | [Retrieving Azure Storage resources and metadata by using the Azure Storage SDK for .NET](Documentos/Mod03/Lab03-Retrieving_Azure_Storage_resources_and_metadata_by_using_the_Azure_Storage_SDK_for_NET.md) |](Documentos/Mod03/Lab03-Retrieving_Azure_Storage_resources_and_metadata_by_using_the_Azure_Storage_SDK_for_NET.md) |
+| Lab | [Sharing team knowledge using Azure project wikis](Documentos/lab03/lab03.md) |
 
 ### Module 4 Working with Git for Enterprise DevOps
 | Tipo  | Descripción                                |
