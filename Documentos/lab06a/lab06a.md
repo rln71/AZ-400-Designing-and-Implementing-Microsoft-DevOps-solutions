@@ -258,7 +258,11 @@ In this task, you will trigger a continuous integration build.
 
    
 
-1.  Click the build entry to display its details and verify that it completed successfully. 
+1. Click the build entry to display its details and verify that it completed successfully. 
+
+   ![lab06a_21](images/lab06a_21.png)
+
+   
 
 #### Review
 
