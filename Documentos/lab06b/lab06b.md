@@ -60,7 +60,7 @@ In this task, you will fork a GitHub repo and install Azure Pipelines in your Gi
 
 2. On the **actionsdemos/calculator site** page, click **Fork**, to fork the repository to your own GitHub account. If prompted, select the account to fork the repository into.
 
-   ![lab06b_01](images\lab06b_01.png)
+   ![lab06b_01](images/lab06b_01.png)
 
    
 
@@ -70,7 +70,7 @@ In this task, you will fork a GitHub repo and install Azure Pipelines in your Gi
 
 4. In the **Search for apps and actions**, type **Azure Pipelines**, press the **Enter** key, and, in the list of results, click **Azure Pipelines**. 
 
-   ![lab06b_02](images\lab06b_02.png)
+   ![lab06b_02](images/lab06b_02.png)
 
    
 
@@ -80,7 +80,7 @@ In this task, you will fork a GitHub repo and install Azure Pipelines in your Gi
 
 6. On the **Azure Pipelines** page, click **Install it for free**. If you have multiple **GitHub** accounts, select the one you forked the calculator to from the **Switch billing account** dropdown.
 
-   ![lab06b_03](images\lab06b_03.png)
+   ![lab06b_03](images/lab06b_03.png)
 
    
 
@@ -90,7 +90,7 @@ In this task, you will fork a GitHub repo and install Azure Pipelines in your Gi
 
    > **Note**: You have the option to specify repositories to include, but for the purposes of this lab, just include all of them. Note that Azure DevOps requires the listed set of permissions to fulfill its services. 
 
-   ![lab06b_04](images\lab06b_04.png)
+   ![lab06b_04](images/lab06b_04.png)
 
    
 
@@ -98,7 +98,7 @@ In this task, you will fork a GitHub repo and install Azure Pipelines in your Gi
 
 10. When prompted, on the **Setup your Azure Pipelines project** page, in the **Select your Azure DevOps organization** dropdown list, select your Azure DevOps account and click **Create a new project**.
 
-    ![lab06b_05](images\lab06b_05.png)
+    ![lab06b_05](images/lab06b_05.png)
 
     
 
@@ -106,7 +106,7 @@ In this task, you will fork a GitHub repo and install Azure Pipelines in your Gi
 
 12. On the **Azure Pipelines by Microsoft would like permission to** page, click **Authorize Azure Pipelines**.
 
-![lab06b_06](images\lab06b_06.png)
+![lab06b_06](images/lab06b_06.png)
 
 
 
@@ -124,7 +124,7 @@ In this task, you will configure the Azure Pipelines project based on the fork o
 
     > **Note**: Azure Pipelines will analyze your project in an attempt to determine if any existing templates would be a good fit. In this case, the recommended template is for **Node.js**, which is perfect for our needs. Some alternative templates are also suggested, although the recommended one is the best for this lab. 
     
-    ![lab06b_07](images\lab06b_07.png)
+    ![lab06b_07](images/lab06b_07.png)
     
     
     
@@ -132,13 +132,13 @@ In this task, you will configure the Azure Pipelines project based on the fork o
 
    > **Note**: The build pipeline is defined as **YAML**, a markup syntax well-suited to defining processes like this because it allows you to manage the configuration of the pipeline like any other file in the repo. It's a pretty simple template that identifies the pool to pull a VM from for building, the process to install Node.js for building, and the actual build itself. 
 
-   ![lab06b_08](images\lab06b_08.png)
+   ![lab06b_08](images/lab06b_08.png)
 
    
 
 1. On the **Review your pipeline YAML**, click **Save and run** to save the pipeline and queue a new build.
 
-   ![lab06b_09](images\lab06b_09.png)
+   ![lab06b_09](images/lab06b_09.png)
 
    
 
@@ -152,13 +152,13 @@ In this task, you will configure the Azure Pipelines project based on the fork o
 
    Da un error. Para solventarlo <mark>hay que cambiar el proyecto a **privado**</mark>, desde las propiedades del proyecto.
 
-   ![lab06b_10](images\lab06b_10.png)
+   ![lab06b_10](images/lab06b_10.png)
 
    
 
    Reiniciar el job y comprobar que funciona correctamente.
 
-   ![lab06b_11](images\lab06b_11.png)
+   ![lab06b_11](images/lab06b_11.png)
 
    
 
@@ -172,7 +172,7 @@ In this task, you will modify the YAML build definition in the forked GitHub rep
 
    > **Note**: Since this lab will involve stepping back and forth between GitHub and Azure DevOps, it'll be easier to keep a browser tab open to each.
 
-   ![lab06b_12](images\lab06b_12.png)
+   ![lab06b_12](images/lab06b_12.png)
 
    
 
@@ -189,7 +189,7 @@ In this task, you will modify the YAML build definition in the forked GitHub rep
    displayName: 'npm install, build, and test'
    ```
 
-   ![lab06b_13](images\lab06b_13.png)
+   ![lab06b_13](images/lab06b_13.png)
 
    
 
@@ -197,7 +197,7 @@ In this task, you will modify the YAML build definition in the forked GitHub rep
 
    > **Note**: Again, it's acceptable to commit this change directly to the master branch considering that this is a lab environment.
 
-   ![lab06b_14](images\lab06b_14.png)
+   ![lab06b_14](images/lab06b_14.png)
 
    
 
@@ -207,7 +207,7 @@ In this task, you will modify the YAML build definition in the forked GitHub rep
 
 1. On the pane displaying job details, click on individual tasks of the job and follow it through to completion.
 
-   ![lab06b_15](images\lab06b_15.png)
+   ![lab06b_15](images/lab06b_15.png)
 
    
 
@@ -229,13 +229,13 @@ In this task, you will propose an invalid change and review the results of a bui
 
    > **Note**: This is an incorrect change that would result in invalid outcome.
 
-   ![lab06b_16](images\lab06b_16.png)
+   ![lab06b_16](images/lab06b_16.png)
 
    
 
 1. Scroll to the bottom of the page, replace the default commit message with **Modifying the add function**, select **Create a new branch**, set its name to **addition-cleanup**, and click **Propose file change**.
 
-   ![lab06b_17](images\lab06b_17.png)
+   ![lab06b_17](images/lab06b_17.png)
 
    
 
@@ -247,13 +247,13 @@ In this task, you will propose an invalid change and review the results of a bui
 
 1. On the **Modifying the add function #1** pull request page, in the **All checks have failed** section, click **Details** to learn more.
 
-   ![lab06b_18](images\lab06b_18.png)
+   ![lab06b_18](images/lab06b_18.png)
 
    
 
 1. Review the **ANNOTATIONS** section and click the link **View more details on Azure Pipelines** directly below it. This will open a new browser tab displaying the failed run of the job in the Azure DevOps portal.
 
-   ![lab06b_19](images\lab06b_19.png)
+   ![lab06b_19](images/lab06b_19.png)
 
    
 
@@ -265,7 +265,7 @@ In this task, you will propose an invalid change and review the results of a bui
 
    > **Note**: It might not be immediately clear why the tests failed, but all of the history we've accrued in the pipeline makes it easy to identify that something from this new pull request is the cause. The next step will be to figure out why "21 + 21" produced "2121" instead of the expected "42".
 
-   ![lab06b_20](images\lab06b_20.png)
+   ![lab06b_20](images/lab06b_20.png)
 
    
 
@@ -285,13 +285,13 @@ In this task, you will correct the invalid changes introduced in the pull reques
 
    > **Note**: It appears that the changes were made by someone who didn't realize that the plus signs before each variable were necessary to coerce those variables to their number representations. By removing them, JavaScript interpreted the middle plus sign as the string concatenation operator, which explains why 21 + 21 = 2121 in the failed test. 
 
-   ![lab06b_21](images\lab06b_21.png)
+   ![lab06b_21](images/lab06b_21.png)
 
    
 
 1. On the **Modifying the add function #1** GitHub page, click the ellipsis symbol directly under the **Review changes** button and, in the drop-down menu, click **Edit file**. 
 
-   ![lab06b_22](images\lab06b_22.png)
+   ![lab06b_22](images/lab06b_22.png)
 
    
 
@@ -299,7 +299,7 @@ In this task, you will correct the invalid changes introduced in the pull reques
 
 1. Scroll to the bottom of the page, replace the default commit message with **Fixing the add function**, ensure that the option to **Commit directly to the addition-cleanup branch** is selected, and click **Commit changes**.
 
-   ![lab06b_23](images\lab06b_23.png)
+   ![lab06b_23](images/lab06b_23.png)
 
    
 
@@ -309,7 +309,7 @@ In this task, you will correct the invalid changes introduced in the pull reques
 
 1. Once all checks have passed, click **Merge pull request** and then click **Confirm merge**.
 
-   ![lab06b_24](images\lab06b_24.png)
+   ![lab06b_24](images/lab06b_24.png)
 
    
 
@@ -321,11 +321,11 @@ In this task, you will add a build status badge to your GitHub repo.
 
 Para que esta tarea pueda realizarse es necesario <mark>desactivar la propiedad **Disable anonymous access to badges** en las propiedades de la organización</mark>.
 
-![lab06b_28](images\lab06b_28.png)
+![lab06b_28](images/lab06b_28.png)
 
 
 
-![lab06b_29](images\lab06b_29.png)
+![lab06b_29](images/lab06b_29.png)
 
 
 
@@ -337,7 +337,7 @@ Para que esta tarea pueda realizarse es necesario <mark>desactivar la propiedad 
 
    > **Note**: The **Status badge** UI provides a quick and easy way to reference the build status. Often, you'll want to use the provided URLs in your own dashboards, or you can use the Markdown snippet to add the status badge to locations such as Wiki pages. 
 
-   ![lab06b_25](images\lab06b_25.png)
+   ![lab06b_25](images/lab06b_25.png)
 
    
 
@@ -349,19 +349,19 @@ Para que esta tarea pueda realizarse es necesario <mark>desactivar la propiedad 
 
 1. Add an extra line above line 6 and paste into it the content of Clipboard.
 
-   ![lab06b_26](images\lab06b_26.png)
+   ![lab06b_26](images/lab06b_26.png)
 
    
 
 1.  Scroll to the bottom of the page, replace the default commit message with **Add an Azure Pipelines status badge**, and click **Commit changes**. 
 
-    ![lab06b_27](images\lab06b_27.png)
+    ![lab06b_27](images/lab06b_27.png)
     
     
     
     > **Note**: You now have a dynamic build status badge on your project's front page that allows everyone to know that you're effectively managing your project.
 
-![lab06b_30](images\lab06b_30.png)
+![lab06b_30](images/lab06b_30.png)
 
 #### Review
 
