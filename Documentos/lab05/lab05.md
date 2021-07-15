@@ -299,7 +299,7 @@ In this task, you will configure the LOD VM as an Azure DevOps self-hosting agen
 
    > **Note**: If you receive an error message at this point indicating that the current system settings prevent you from downloading the file, in the Internet Explorer window, in the upper right corner, click the gearwheel symbol designating the **Settings** menu header, in the dropdown menu, select **Internet Options**, in the **Internet Options** dialog box, click **Advanced**, on the **Advanced** tab, click **Reset**, in the **Reset Internet Explorer Settings** dialog box, click **Reset** again, click **Close**, and try the download again. 
 
-1. Start Windows PowerShell as administrator and in the **Administrator: Windows PowerShell** console run the following lines to create the **C:\\agent** directory and extract the content of the downloaded archive into it. 
+1. Start Windows PowerShell <mark>as administrator</mark> and in the **Administrator: Windows PowerShell** console run the following lines to create the **C:\\agent** directory and extract the content of the downloaded archive into it. 
 
    ```powershell
    cd \
@@ -420,4 +420,6 @@ In this task, you will configure the LOD VM as an Azure DevOps self-hosting agen
 #### Review
 
 In this lab, you learned how to convert classic pipelines into YAML-based ones and how to implement and use self-hosted agents.
+
+Hay que borrar el agente con <mark>.\config.cmd remove</mark> para eliminar el servicio de la máquina local y que no se restaure con cada reinicio del *PC*.
 
