@@ -1,9 +1,3 @@
----
-lab:
-    title: 'Lab 08: Implementing GitHub Actions by using DevOps Starter'
-    module: 'Module 8: Implementing Continuous Integration with GitHub Actions'
----
-
 # Lab 08: Implementing GitHub Actions by using DevOps Starter
 # Student lab manual
 
@@ -36,7 +30,7 @@ Ensure that you're signed in to your Windows 10 virtual machine by using the fol
 #### Review applications required for this lab
 
 Identify the applications that you'll use in this lab:
-  
+
 -   Microsoft Edge
 
 #### Prepare an Azure subscription
@@ -64,73 +58,183 @@ In this exercise, you will use DevOps Starter to facilitate provisioning of a nu
 
 In this task, you will create an Azure DevOps Starter project that automatically sets up a GitHub repository, as well as creates and triggers a GitHub workflow that deploys an Azure web app, based on the content of the GitHub repository.
 
-1.  From the lab computer, start a web browser, navigate to the [**Azure Portal**](https://portal.azure.com), and sign in with the user account that has at least the Contributor role in the Azure subscription you are using in this lab.
-1.  In the Azure portal, search for and select the **DevOps Starter** resource type and, on the **DevOps Starter** blade, click either **+ Add**, **+ New**, or **+ Create**.
-1.  On the **Start fresh with a new application** page of the **DevOps Starter** blade, click the **here** link in the **Setting up DevOps starter with GitHub, click here** text. 
+1. From the lab computer, start a web browser, navigate to the [**Azure Portal**](https://portal.azure.com), and sign in with the user account that has at least the Contributor role in the Azure subscription you are using in this lab.
 
-    > **Note**: This will display the **DevOps starter settings** blade. 
+1. In the Azure portal, search for and select the **DevOps Starter** resource type and, on the **DevOps Starter** blade, click either **+ Add**, **+ New**, or **+ Create**.
 
-1.  On the **DevOps starter settings** blade, ensure that the **GitHub** tile is selected and click **Done**.
-1.  Back on the **DevOps Starter** blade, click **Next: Framework >**.
-1.  On the **Choose an application framework** page of the **DevOps Starter** blade, select the **ASP.NET Core** tile and click **Next: Service >**.
-1.  On the **Select an Azure service to deploy the application** page of the **DevOps Starter** blade, ensure that the **Windows Web App** tile is selected and click **Next: Create >**.
+   ![lab08_01](images/lab08_01.png)
+
+   
+
+1. On the **Start fresh with a new application** page of the **DevOps Starter** blade, click the **here** link in the **Setting up DevOps starter with GitHub, click here** text. 
+
+   > **Note**: This will display the **DevOps starter settings** blade. 
+
+   ![lab08_02](images/lab08_02.png)
+
+   
+
+1. On the **DevOps starter settings** blade, ensure that the **GitHub** tile is selected and click **Done**.
+
+   ![lab08_03](images/lab08_03.png)
+
+1. Back on the **DevOps Starter** blade, click **Next: Framework >**.
+
+1. On the **Choose an application framework** page of the **DevOps Starter** blade, select the **ASP.NET Core** tile and click **Next: Service >**.
+
+   ![lab08_04](images/lab08_04.png)
+
+   
+
+1. On the **Select an Azure service to deploy the application** page of the **DevOps Starter** blade, ensure that the **Windows Web App** tile is selected and click **Next: Create >**.
+
+   ![lab08_05](images/lab08_05.png)
+
+   
+
 1.  On the **Select Repository and Subscription** page of the **DevOps Starter** blade, click **Authorize**. 
 
     > **Note**: This will display the **Authorize Azure GitHub Actions** pop-up web browser window.
 
-1.  In the **Authorize Azure GitHub Actions** pop-up window, review the required permissions and click **Authorize AzureGithubActions**. 
+1. In the **Authorize Azure GitHub Actions** pop-up window, review the required permissions and click **Authorize AzureGithubActions**. 
 
-    > **Note**: This will redirect the web pop-up browser window to the Azure DevOps site, prompting you for your Azure DevOps information.
+   > **Note**: This will redirect the web pop-up browser window to the Azure DevOps site, prompting you for your Azure DevOps information.
 
-1.  When prompted, in the pop-up web browser window, click **Continue**.
-1.  Back on the **Select Repository and Subscription** page of the **DevOps Starter** blade, specify the following settings and click **Review + Create**:
+   ![lab08_06](images/lab08_06.png)
 
-    | Setting | Value |
-    | ------- | ----- |
-    | Organization | the name of GitHub account |
-    | Repository | **az400m08l01** |
-    | Subscription | the name of the Azure subscription you are using for this lab |
-    | Web app name | any valid, globally unique host name in the **azurewebsites.net** DNS namespace |
-    | Location | the name of any Azure region in which you can provision an Azure web app |
+   
 
-    > **Note**: Wait for the provisioning to complete. This should take about 1 minute.
+   ![lab08_07](images/lab08_07.png)
 
-1.  On the **Deploy_DevOps_Project_az400m08l01 \| Overview** blade, click **Go to Resource**.
-1.  On the **az400m08l01** blade, on the **GitHub Workflow** tile, click **Authorize**. 
-1.  On the **GitHub Authorization** blade, click **Authorize** again.
+   
+
+1. When prompted, in the pop-up web browser window, click **Continue**.
+
+1. Back on the **Select Repository and Subscription** page of the **DevOps Starter** blade, specify the following settings and click **Review + Create**:
+
+   | Setting | Value |
+   | ------- | ----- |
+   | Organization | the name of GitHub account |
+   | Repository | **az400m08l01** |
+   | Subscription | the name of the Azure subscription you are using for this lab |
+   | Web app name | any valid, globally unique host name in the **azurewebsites.net** DNS namespace |
+   | Location | the name of any Azure region in which you can provision an Azure web app |
+
+   > **Note**: Wait for the provisioning to complete. This should take about 1 minute.
+
+   ![lab08_08](images/lab08_08.png)
+
+   
+
+1. On the **Deploy_DevOps_Project_az400m08l01 \| Overview** blade, click **Go to Resource**.
+
+   ![lab08_09](images/lab08_09.png)
+
+   
+
+1. On the **az400m08l01** blade, on the **GitHub Workflow** tile, click **Authorize**. 
+
+1. On the **GitHub Authorization** blade, click **Authorize** again.
+
+   ![lab08_10](images/lab08_10.png)
+
+   
+
 1.  Back on the **az400m08l01** blade, monitor the progress of actions on the **GitHub Workflow** tile. 
 
     > **Note**: Wait for the build, deployment, and functional tests jobs of the GitHub workflow to complete. This should take about 5 minutes.
+
+![lab08_11](images/lab08_11.png)
+
+
 
 #### Task 2: Review the results of creating the DevOps Starter project
 
 In this task, you will review the results of creating the DevOps Starter project.
 
-1.  In the web browser window displaying the Azure portal, on the **az400m08l01** blade, review the **GitHub Workflow** section and verify that the **build**, **deploy**, and **Functional tests** jobs completed successfully.
-1.  On the **az400m08l01** blade, review the **Azure resources** section and verify that they include an App Service web app instance and the corresponding Application Insights resource.
-1.  At the top of the **az400m08l01** blade, note the link to the **Workflow file** and the GitHub repository you created in the previous task.
-1.  At the top of the **az400m08l01** blade, click the link to the GitHub repository. 
+1. In the web browser window displaying the Azure portal, on the **az400m08l01** blade, review the **GitHub Workflow** section and verify that the **build**, **deploy**, and **Functional tests** jobs completed successfully.
+
+1. On the **az400m08l01** blade, review the **Azure resources** section and verify that they include an App Service web app instance and the corresponding Application Insights resource.
+
+1. At the top of the **az400m08l01** blade, note the link to the **Workflow file** and the GitHub repository you created in the previous task.
+
+   ![lab08_12](images/lab08_12.png)
+
+   
+
+1. At the top of the **az400m08l01** blade, click the link to the GitHub repository. 
+
 1.  On the GitHub repository page, note the three folders labeled:
 
     - **.github\workflows** - containing the YAML-formatted workflow file
     - **Application** - containing the code of the sample web site
     - **ArmTemplates** - containing the Azure Resource Manager templates that the workflow uses to provision Azure resources
 
-1.  On the GitHub repository page, click **.github/workflows** and then, click the **devops-starter-workflow.yml** entry.
-1.  On the GitHub repository page displaying the content of the **devops-starter-workflow.yml**, review its content and note that it contains the **build**, **deploy**, and **Functional tests** job definitions.
-1.  On the GitHub repository page, in the toolbar, click **Actions**.
-1.  On the GitHub repository page, on the **Actions** tab, in the **All workflows** section, click the entry representing the most recent workflow run.
-1.  On the workflow run page, review the workflow status, as well as the listing of **Annotations** and **Artifacts**.
-1.  On the GitHub repository page, in the toolbar, click **Settings** and, on the **Settings** tab, click **Secrets**.
-1.  On the **Action secrets** pane, note the **AZURE_CREDENTIALS** entry, representing the credentials necessary to access the target Azure subscription. 
-1.  Navigate to the **az400m08l01/Application/aspnet-core-dotnet-core/Pages/Index.cshtml** GitHub repository page and, in the upper right corner, click the pencil icon to switch to the edit mode.
-1.  Change the line 19 to `<div class="description line-1"> GitHub Workflow has been successfully updated</div>`.
-1.  Scroll down to the bottom of the page and click **Commit changes**.
-1.  On the GitHub repository page, in the toolbar, click **Actions**.
-1.  In the **All workflows** section, click the **Update Index.cshtml** entry.
-1.  In the **devops-starter-workflow.yml** section, monitor the progress of deployment and verify that it completed successfully.
-1.  Switch to the browser window displaying the DevOps Starter blade in the Azure portal and click the **Browse** link next to the **Application endpoint** entry.
-1.  In the newly opened web browser window, verify that the updated text representing the change you committed in the GitHub repo is displayed on the web app home page.
+1. On the GitHub repository page, click **.github/workflows** and then, click the **devops-starter-workflow.yml** entry.
+
+1. On the GitHub repository page displaying the content of the **devops-starter-workflow.yml**, review its content and note that it contains the **build**, **deploy**, and **Functional tests** job definitions.
+
+   ![lab08_13](images/lab08_13.png)
+
+   
+
+1. On the GitHub repository page, in the toolbar, click **Actions**.
+
+1. On the GitHub repository page, on the **Actions** tab, in the **All workflows** section, click the entry representing the most recent workflow run.
+
+1. On the workflow run page, review the workflow status, as well as the listing of **Annotations** and **Artifacts**.
+
+   ![lab08_14](images/lab08_14.png)
+
+   
+
+1. On the GitHub repository page, in the toolbar, click **Settings** and, on the **Settings** tab, click **Secrets**.
+
+   ![lab08_15](images/lab08_15.png)
+
+   
+
+1. On the **Action secrets** pane, note the **AZURE_CREDENTIALS** entry, representing the credentials necessary to access the target Azure subscription. 
+
+1. Navigate to the **az400m08l01/Application/aspnet-core-dotnet-core/Pages/Index.cshtml** GitHub repository page and, in the upper right corner, click the pencil icon to switch to the edit mode.
+
+1. Change the line 19 to `<div class="description line-1"> GitHub Workflow has been successfully updated</div>`.
+
+   ![lab08_16](images/lab08_16.png)
+
+   
+
+1. Scroll down to the bottom of the page and click **Commit changes**.
+
+1. On the GitHub repository page, in the toolbar, click **Actions**.
+
+   ![lab08_17](images/lab08_17.png)
+
+   
+
+1. In the **All workflows** section, click the **Update Index.cshtml** entry.
+
+1. In the **devops-starter-workflow.yml** section, monitor the progress of deployment and verify that it completed successfully.
+
+   ![lab08_18](images/lab08_18.png)
+
+   
+
+1. Switch to the browser window displaying the DevOps Starter blade in the Azure portal and click the **Browse** link next to the **Application endpoint** entry.
+
+   ![lab08_19](images/lab08_19.png)
+
+   
+
+1. In the newly opened web browser window, verify that the updated text representing the change you committed in the GitHub repo is displayed on the web app home page.
+
+   ![lab08_20](images/lab08_20.png)
+
+   He vuelto a editar el ***Index.cshtml*** y pulsar en ***Commit changes***, y compruebo que tras finalizar el *workflow* los nuevos cambios se aplican correctamente.
+
+   ![lab08_21](images/lab08_21.png)
+
+   
 
 ### Exercise 2: Remove the Azure lab resources
 
@@ -156,6 +260,12 @@ In this task, you will use Azure Cloud Shell to remove the Azure resources provi
     ```
 
     >**Note**: The command executes asynchronously (as determined by the --nowait parameter), so while you will be able to run another Azure CLI command immediately afterwards within the same Bash session, it will take a few minutes before the resource groups are actually removed.
+
+![lab08_22](images/lab08_22.png)
+
+
+
+Borrando el grupo ***romanlopez-rg*** se borra la *webapp*. Borrando el grupo ***VstsRG-az400m08l01-4dc7*** se borra el *DevOps starter*.
 
 ## Review
 
