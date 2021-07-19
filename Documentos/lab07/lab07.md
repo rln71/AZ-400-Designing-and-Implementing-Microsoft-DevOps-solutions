@@ -470,6 +470,10 @@ Una vez conectado puedo ejecutar consultas a la base de datos.
 
 ![lab07_45](images/lab07_45.png)
 
+En la siguiente imagen se observa que la tabla ***user*** aloja a dos usuarios que son los pueden conectarse a la *webapp*.
+
+![lab07_46](images/lab07_46.png)
+
 
 
 ### Exercise 2: Remove the Azure lab resources
