@@ -441,11 +441,11 @@ In this task, you will update a NuGet package.
 
 1. In the **NuGet: PartsUnlimitedWebsite** pane, click the **Updates** tab, in the search textbox, type **PartsUnlimited.Shared** and, on the right-hand side of the pane, next to the **Version: Latest stable 1.1.0** dropdown list, click **Update** to install the new version. 
 
-   > **Note**: There may be many NuGet updates available, but you should only need to update **PartsUnlimited.Shared**. Note that it may take a little while for the package to become completely available for updating. If you get an error, wait a moment and try again.
+    > **Note**: There may be many NuGet updates available, but you should only need to update **PartsUnlimited.Shared**. Note that it may take a little while for the package to become completely available for updating. If you get an error, wait a moment and try again.
 
-   ![lab09_31](images/lab09_31.png)
+    ![lab09_31](images/lab09_31.png)
 
-   
+    Me surgieron problemas de que no reconocía el namespace **PartsUnlimited.Shared** ni por tanto la clase TaxService. No sé si fue porque no se había actualizado aún como comenta el manual, pero rehice los pasos como explico más adelante, y funcionó correctamente.
 
 1. When prompted, in the **Preview Changes** dialog box, click **OK**.
 
