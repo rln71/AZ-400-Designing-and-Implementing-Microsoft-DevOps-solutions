@@ -41,7 +41,7 @@ Identify the applications that you'll use in this lab:
 
   ![lab09_01a](images/lab09_01a.png)
 
-  También es necesario instalar todas las **Herramientas de código** dentro de *Componentes individuales*.
+  También es necesario instalar todas las **Herramientas de código** dentro de *Componentes individuales*, si no, el proyecto *PartsUnlimited.DepValidation* no es reconocido (tiene que ver con las herramientas de diseño, diagramas y UML) y la solución no compilaría.
 
   ![lab09_01b](images/lab09_01b.png)
 
@@ -115,7 +115,7 @@ In this task, you will configure Visual Studio to prepare for the lab.
 
 1. Close the web browser tab displaying the Migration Report page.
 
-   No se ha abierto ningún browser, pero la carpeta con el proyecto se ha clonado bien. Está en la ubicación indicada del sistema de ficheros, y el VisualStudio reconoce los proyectos y la solución. Si VisualStudio no tuviera instalados los workloads y las Code Tools mencionadas al principio del laboratorio este paso hubiera fallado: sí se habrían copiado los ficheros a local pero VisualStudio no reconocería los proyectos.
+   <mark>No se ha abierto el browser</mark>, pero la carpeta con el proyecto se ha clonado bien. Está en la ubicación indicada del sistema de ficheros, y el VisualStudio reconoce los proyectos y la solución. Si VisualStudio no tuviera instalados los workloads y las Code Tools mencionadas al principio del laboratorio este paso hubiera fallado: sí se habrían copiado los ficheros a local pero VisualStudio no reconocería los proyectos.
 
    ![lab09_05b](images/lab09_05b.png)
 
@@ -445,7 +445,7 @@ In this task, you will update a NuGet package.
 
     ![lab09_31](images/lab09_31.png)
 
-    Me surgieron problemas de que no reconocía el namespace **PartsUnlimited.Shared** ni por tanto la clase TaxService. No sé si fue porque no se había actualizado aún como comenta el manual, pero rehice los pasos como explico más adelante, y funcionó correctamente.
+    Aunque a priori el update se realizó correctamente, me surgieron problemas en el editor porque no reconocía el namespace **PartsUnlimited.Shared** ni por tanto la clase TaxService, y lógicamente no se podía compilar. No sé si fue porque no se había actualizado el ensamblado aún como comenta el manual, pero rehice los pasos como explico un poco más adelante en **Problemas encontrados**, y ya funcionó correctamente.
 
 1. When prompted, in the **Preview Changes** dialog box, click **OK**.
 
