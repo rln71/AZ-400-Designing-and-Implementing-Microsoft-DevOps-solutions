@@ -41,7 +41,7 @@ Identify the applications that you'll use in this lab:
 
   ![lab09_01a](images/lab09_01a.png)
 
-  También es necesario instalar todas las **Herramientas de código** dentro de *Componentes individuales*, si no, el proyecto *PartsUnlimited.DepValidation* no es reconocido (tiene que ver con las herramientas de diseño, diagramas y UML) y la solución no compilaría.
+  También es necesario instalar todas las **Herramientas de código** dentro de *Componentes individuales*, si no, el proyecto *PartsUnlimited.DepValidation* de la solución no será reconocido (tiene que ver con las herramientas de diseño, diagramas y UML) y la solución no compilaría.
 
   ![lab09_01b](images/lab09_01b.png)
 
