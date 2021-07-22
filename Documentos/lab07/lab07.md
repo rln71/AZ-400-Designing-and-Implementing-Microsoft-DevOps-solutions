@@ -79,7 +79,7 @@ In this exercise, you will set up the prerequisite for the lab, which consists o
 
 In this task, you will use Azure DevOps Demo Generator to generate a new project based on the **Azure Key Vault** template.
 
-Como en las prácticas anteriores del módulo y para facilitar la creación del proyecto a partir de una plantilla, primero entrar en *portal.azure.com* y situarse en el **DEFAULT DIRECTORY** de la cuenta si no lo estuviéramos ya, y clic en **Azure DevOps organizations**.
+<a name="create_project_devops"></a>Como en las prácticas anteriores del módulo y para facilitar la creación del proyecto a partir de una plantilla, primero entrar en *portal.azure.com* y situarse en el **DEFAULT DIRECTORY** de la cuenta si no lo estuviéramos ya, y clic en **Azure DevOps organizations**.
 
 ![lab07_05](images/lab07_05.png)
 

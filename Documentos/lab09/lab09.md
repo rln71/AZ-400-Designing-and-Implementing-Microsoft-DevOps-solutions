@@ -75,7 +75,7 @@ In this task, you will use Azure DevOps Demo Generator to generate a new project
 
 1. On the **Create New Project** page, click **Navigate to project**.
 
-   <mark>Ver el [Laboratorio-07](Documentos/lab07/lab07.md) donde explico paso a paso cómo crear un proyecto e importar una plantilla desde **Azure DevOps Demo Generator**</mark>. A continuación sólo dejo la evidencia de la creación del proyecto.
+   <mark>Ver el [Laboratorio-07](Documentos/lab07/lab07.md#create_project_devops) donde explico paso a paso cómo crear un proyecto e importar una plantilla desde **Azure DevOps Demo Generator**</mark>. A continuación sólo dejo la evidencia de la creación del proyecto.
 
    ![lab09_01](images/lab09_01.png)
 

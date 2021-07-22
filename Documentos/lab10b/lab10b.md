@@ -51,7 +51,7 @@ If you don't already have an Azure DevOps organization that you can use for this
 
 - Verify that you have a Microsoft account or an Azure AD account with the Owner role in the Azure subscription. For details, refer to [List Azure role assignments using the Azure portal](https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-list-portal).
 
-  <mark>En el [Lab 07](../lab07/lab07.md#role_owner) explico como asignar el role de Owner a mi cuenta</mark>. 
+  > <mark>En el [Laboratorio 07](../lab07/lab07.md#role_owner) explico como asignar el role de Owner a mi cuenta</mark>.
 
 ### Exercise 1: Create a release dashboard
 
@@ -59,79 +59,229 @@ In this exercise, you will create a release dashboard in an Azure DevOps organiz
 
 #### Task 1: Create an Azure DevOps Starter resource
 
-In this task, you will create an Azure DevOps Starter resource in your Azure subscription. This will automatically create a corresponding project in your Azure DevOps organization. 
+In this task, you will create an Azure DevOps Starter resource in your Azure subscription. This will automatically create a corresponding project in your Azure DevOps organization.
 
-1.  On your lab computer, start a web browser, navigate to the [**Azure Portal**](https://portal.azure.com) and sign in with the user account that has the Owner or Contributor role in the Azure subscription you will be using in this lab.
-1.  In the Azure portal, search for and select the **DevOps Starter** resource type and, on the **DevOps Starter** blade, click **+ Add**. 
-1.  On the **DevOps Starter** blade, on the **Start fresh with a new application** pane, select the **.NET** tile and on the tops next to Setting up DevOps starter with GitHub, change settings, click **here** and select **Azure DevOps** , **Done** and **Next: Framework >**. 
-1.  On the **DevOps Starter** blade, on the **Choose an application framework** pane, select the **ASP<nolink>.NET Core** tile, move the **Add a database** slider to the **On** position, and click **Next: Service >**. 
-1.  On the **DevOps Starter** blade, on the **Select an Azure service to deploy the application** pane, ensure that the **Windows Web App** tile is selected and click **Next: Create >**. 
-1.  On the **DevOps Starter** blade, on the **Almost there** pane, specify the following settings:
+> <mark>En el [Laboratorio-08](../lab08/lab08.md#create_devops_starterproject) explico paso a paso cómo crear un Azure DevOps Starter Project</mark>.
 
-    | Setting | Value |
-    | ------- | ----- |
-    | Project name | **Creating a Release Dashboard** |
-    | Azure DevOps Organization | the name of the Azure DevOps organization you intend to use in this lab |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Web app name | any globally unique string between 2 and 60 characters consisting of letters, digits, and hyphens, starting and ending with either a letter or a digit |
-    | Location | the name of Azure region into which you intend to deploy an Azure web app and an Azure SQL database |
+1. On your lab computer, start a web browser, navigate to the [**Azure Portal**](https://portal.azure.com) and sign in with the user account that has the Owner or Contributor role in the Azure subscription you will be using in this lab.
 
-1.  On the **DevOps Starter** blade, on the **Almost there** pane, click **Additional settings**.
-1.  On the **Additional settings** pane, specify the following settings and click **OK**.
+1. In the Azure portal, search for and select the **DevOps Starter** resource type and, on the **DevOps Starter** blade, click **+ Add**. 
 
-    | Setting | Value |
-    | ------- | ----- |
-    | Create new Azure DevOps organization | **No** |
-    | Resource group | **az400m10l02-rg** |
-    | Pricing tier | **S1 Standard** |
-    | Application Insights Location | the name of the same Azure region that you chose for the location of the Azure web app |
-    | Server name | any globally unique string between 3 and 63 characters consisting of letters, digits, and hyphens, starting and ending with either a letter or a digit |
-    | Enter username | **dbadmin** |
-    | Location | the name of the same Azure region that you chose for the location of the Azure web app |
-    | Database Name | **az400m10l02-db** |
+1. On the **DevOps Starter** blade, on the **Start fresh with a new application** pane, select the **.NET** tile and on the tops next to Setting up DevOps starter with GitHub, change settings, click **here** and select **Azure DevOps** , **Done** and **Next: Framework >**. 
+
+   ![lab10b_01](images/lab10b_01.png)
+
+   
+
+1. On the **DevOps Starter** blade, on the **Choose an application framework** pane, select the **ASP<nolink>.NET Core** tile, move the **Add a database** slider to the <mark>**On**</mark> position, and click **Next: Service >**. 
+
+   ![lab10b_02](images/lab10b_02.png)
+
+   
+
+1. On the **DevOps Starter** blade, on the **Select an Azure service to deploy the application** pane, ensure that the **Windows Web App** tile is selected and click **Next: Create >**. 
+
+   ![lab10b_03](images/lab10b_03.png)
+
+   
+
+1. On the **DevOps Starter** blade, on the **Almost there** pane, specify the following settings:
+
+   | Setting | Value |
+   | ------- | ----- |
+   | Project name | **Creating a Release Dashboard** |
+   | Azure DevOps Organization | the name of the Azure DevOps organization you intend to use in this lab |
+   | Subscription | the name of the Azure subscription you are using in this lab |
+   | Web app name | any globally unique string between 2 and 60 characters consisting of letters, digits, and hyphens, starting and ending with either a letter or a digit |
+   | Location | the name of Azure region into which you intend to deploy an Azure web app and an Azure SQL database |
+
+   
+
+1. On the **DevOps Starter** blade, on the **Almost there** pane, click **Additional settings**.
+
+   ![lab10b_04](images/lab10b_04.png)
+
+   
+
+1. On the **Additional settings** pane, specify the following settings and click **OK**.
+
+   | Setting | Value |
+   | ------- | ----- |
+   | Create new Azure DevOps organization | **No** |
+   | Resource group | **az400m10l02-rg** |
+   | Pricing tier | **S1 Standard** |
+   | Application Insights Location | the name of the same Azure region that you chose for the location of the Azure web app |
+   | Server name | any globally unique string between 3 and 63 characters consisting of letters, digits, and hyphens, starting and ending with either a letter or a digit |
+   | Enter username | **dbadmin** |
+   | Location | the name of the same Azure region that you chose for the location of the Azure web app |
+   | Database Name | **az400m10l02-db** |
+
+   ![lab10b_05](images/lab10b_05.png)
+
+   
 
 1.  Back on the **DevOps Starter** blade, on the **Almost there** pane, click **Done** and then **Review+Create**.
 
     > **Note**: Wait for the deployment to complete. The provisioning of the **DevOps Starter** resource should take about 2 minutes.
 
-1.  Once you receive the confirmation that the DevOps Starter resource was provisioned, click the **Go to resource** button. This will redirect the browser to the DevOps Starter blade.
+1. Once you receive the confirmation that the DevOps Starter resource was provisioned, click the **Go to resource** button. This will redirect the browser to the DevOps Starter blade.
+
 1.  On the DevOps Starter blade, track the progress of CI/CD pipeline until it completes successfully. 
 
     > **Note**: The creation of the corresponding Azure web app and Azure SQL database might take about 5 minutes. The process automatically creates an Azure DevOps project that includes a ready-to-deploy repository as well as the build and release pipelines. The Azure resources are created as part of the automatically triggered deployment pipeline. 
+
+Se puede visualizar el estado de cada etapa del workflow.
+
+![lab10b_06](images/lab10b_06.png)
+
+
+
+![lab10b_07](images/lab10b_07.png)
+
+Y tras más de diez minutos de espera la pipeline finaliza.
+
+![lab10b_08](images/lab10b_08.png)
+
+
 
 #### Task 2: Create Azure DevOps releases
 
 In this task, you will create several Azure DevOps releases, including one that will result in a failed deployment.
 
-1.  In the web browser displaying the Azure portal, on the DevOps Starter page, in the toolbar, click **Project homepage**. This will automatically open another browser tab displaying the **Creating a Release Dashboard** project in the Azure Devops portal. If prompted to sign in, authenticate with your Azure DevOps organization credentials.
+1. In the web browser displaying the Azure portal, on the DevOps Starter page, in the toolbar, click **Project homepage**.
 
-    > **Note**: First, you will create a new release which will deploy successfully.
+   
 
-1.  In the Azure DevOps portal, in the vertical menu on the left side, click **Repos**, in the list of folders in the repository, navigate to the **Applications\\aspnet-core-dotnet-core\\Pages\\Shared** folder and click the **Index.chtml** entry. 
-1.  On the **Index.chtml** pane, click **Edit**, in line **20**, replace `<div class="description line-2"> Your ASP.NET Core app is up and running on Azure</div>` with `<div class="description line-2"> Your ASP.NET Core app v1.1 is up and running on Azure</div>` click **Commit**, and, on the **Commit** pane, click **Commit** again. This will automatically trigger the build pipeline. 
-1.  In the Azure DevOps portal, in the vertical navigational pane on the left side, click **Pipelines**.
-1.  On the **Recent** tab of the **Pipelines** pane, click the **az400m10l02-CI** entry, on the **Runs** tab of the **az400m10l02-CI** pane, select the most recent run, on the **Summary** tab of the run, in the **Jobs** section, click **Build** and monitor the job until its successful completion. 
-1.  Once the job completes, in the Azure DevOps portal, in the vertical navigational pane on the left side, in the **Pipelines** section, click **Releases**.
-1.  On the **az400m10l02 - CD** pane, on the **Releases** tab, click the **Release-2** entry, on the **Pipeline** tab of the **Release-2** pane click the **dev** stage, on the **dev** pane, click **View logs**, and monitor progress of the deployment until its successful completion. 
+   ![lab10b_09](images/lab10b_09.png)
 
-    > **Note**: Now, you will create a new release which deployment will fail. The failure will be caused by built-in assemblies test, which consider the change associated with the new release to be invalid.
+   
 
-1.  In the Azure DevOps portal, in the vertical menu on the left side, click **Repos**, in the list of folders in the repository, navigate to the **Applications\\aspnet-core-dotnet-core\\Pages\\Shared** folder and click the **Index.chtml** entry. 
-1.  On the **Index.chtml** pane, click **Edit**, in line **4**, replace `    ViewData["Title"] = "Home Page - ASP.NET Core";` with `    ViewData["Title"] = "Home Page v1.2 - ASP.NET Core";` click **Commit**, and, on the **Commit** pane, click **Commit** again. This will automatically trigger the build pipeline. 
-1.  In the Azure DevOps portal, in the vertical navigational pane on the left side, click **Pipelines**.
-1.  On the **Recent** tab of the **Pipelines** pane, click the **az400m10l02-CI** entry, on the **Runs** tab of the **az400m10l02-CI** pane, select the most recent run, on the **Summary** tab of the run, in the **Jobs** section, click **Build** and monitor the job until its successful completion. 
-1.  Once the job completes, in the Azure DevOps portal, in the vertical navigational pane on the left side, in the **Pipelines** section, click **Releases**.
-1.  On the **az400m10l02 - CD** pane, on the **Releases** tab, click the **Release-2** entry, on the **Pipeline** tab of the **Release-2** pane click the **dev** stage, on the **dev** pane, click **View logs**, and monitor progress of the deployment until its failure during the **Test Assemblies** stage. 
+   This will automatically open another browser tab displaying the **Creating a Release Dashboard** project in the Azure Devops portal. If prompted to sign in, authenticate with your Azure DevOps organization credentials.
+
+   > **Note**: First, you will create a new release which will deploy successfully.
+
+   ![lab10b_10](images/lab10b_10.png)
+
+   
+
+1. In the Azure DevOps portal, in the vertical menu on the left side, click **Repos**, in the list of folders in the repository, navigate to the **Applications\\aspnet-core-dotnet-core\\Pages\\Shared** folder and click the **Index.chtml** entry. 
+
+   <mark>El árbol de directorios creados en la pipeline no se corresponde con el enunciado de la práctica. No hay una carpeta *Applications\\aspnet-core-dotnet-core\\Pages\\Shared*. El proyecto teórico del enunciado es de tipo ASP.NET Core, y el real que viene con la pipeline es ASP.NET MVC.</mark>
+
+1. On the **Index.chtml** pane, click **Edit**, in line **20**, replace `<div class="description line-2"> Your ASP.NET Core app is up and running on Azure</div>` with `<div class="description line-2"> Your ASP.NET Core app v1.1 is up and running on Azure</div>` click **Commit**, and, on the **Commit** pane, click **Commit** again. This will automatically trigger the build pipeline. 
+
+   <mark>He encontrado un fichero que tiene una línea con el mismo código del enunciado. Es el fichero localizado en **Application/SampleWebApplication/Views/Home/Index.cshtml**, así que en su línea 18 hago los cambios requeridos en el enunciado.</mark> Click en **Commit**.
+
+   ![lab10b_11](images/lab10b_11.png)
+
+   
+
+1. In the Azure DevOps portal, in the vertical navigational pane on the left side, click **Pipelines**.
+
+   ![lab10b_12](images/lab10b_12.png)
+
+   
+
+1. On the **Recent** tab of the **Pipelines** pane, click the **az400m10l02-CI** entry, on the **Runs** tab of the **az400m10l02-CI** pane, select the most recent run, on the **Summary** tab of the run, in the **Jobs** section, click **Build** and monitor the job until its successful completion. 
+
+   ![lab10b_13](images/lab10b_13.png)
+
+   
+
+1. Once the job completes, in the Azure DevOps portal, in the vertical navigational pane on the left side, in the **Pipelines** section, click **Releases**.
+
+1. On the **az400m10l02 - CD** pane, on the **Releases** tab, click the **Release-2** entry.
+
+   ![lab10b_14](images/lab10b_14.png)
+
+   
+
+   On the **Pipeline** tab of the **Release-2** pane click the **dev** stage, on the **dev** pane, click **View logs**, and monitor progress of the deployment until its successful completion. 
+
+   > **Note**: Now, you will create a new release which deployment will fail. The failure will be caused by built-in assemblies test, which consider the change associated with the new release to be invalid.
+
+   ![lab10b_15](images/lab10b_15.png)
+
+   
+
+   Y después de otra minutada el job termina.
+
+   ![lab10b_16](images/lab10b_16.png)
+
+   
+
+   Desde la página de recursos se puede abrir el webapp y visitar la página actualizada con los cambios.
+
+   ![lab10b_16c](images/lab10b_16c.png)
+
+   
+
+   ![lab10b_16b](images/lab10b_16b.png)
+
+   
+
+1. In the Azure DevOps portal, in the vertical menu on the left side, click **Repos**, in the list of folders in the repository, navigate to the **Applications\\aspnet-core-dotnet-core\\Pages\\Shared** folder and click the **Index.chtml** entry. 
+
+1. On the **Index.chtml** pane, click **Edit**, in line **4**, replace `    ViewData["Title"] = "Home Page - ASP.NET Core";` with `    ViewData["Title"] = "Home Page v1.2 - ASP.NET Core";` click **Commit**, and, on the **Commit** pane, click **Commit** again. This will automatically trigger the build pipeline. 
+
+   <mark>Como en la modificación anterior, aquí edito otra línea, la 2.</mark> Este cambio va a provocar un error en la pipeline más adelante.
+
+   ![lab10b_17](images/lab10b_17.png)
+
+   
+
+1. In the Azure DevOps portal, in the vertical navigational pane on the left side, click **Pipelines**.
+
+   ![lab10b_18](images/lab10b_18.png)
+
+   
+
+1. On the **Recent** tab of the **Pipelines** pane, click the **az400m10l02-CI** entry, on the **Runs** tab of the **az400m10l02-CI** pane, select the most recent run, on the **Summary** tab of the run, in the **Jobs** section, click **Build** and monitor the job until its successful completion.
+
+   ![lab10b_19](images/lab10b_19.png)
+
+   
+
+1. Once the job completes, in the Azure DevOps portal, in the vertical navigational pane on the left side, in the **Pipelines** section, click **Releases**.
+
+   ![lab10b_20](images/lab10b_20.png)
+
+   
+
+1. <mark>En este paso se menciona la Release-2 pero en realidad es la **Release-3**</mark>. On the **az400m10l02 - CD** pane, on the **Releases** tab, click the **Release-2** entry, on the **Pipeline** tab of the **Release-2** pane click the **dev** stage, on the **dev** pane, click **View logs**, and monitor progress of the deployment until its failure during the **Test Assemblies** stage. 
+
+   ![lab10b_21](images/lab10b_21.png)
+
+   
+
+   Y después de casi 15 minutos termina el job con errores.
+
+   ![lab10b_22](images/lab10b_22.png)
+
+   
+
+   ![lab10b_23](images/lab10b_23.png)
+
+   
 
 #### Task 3: Create an Azure DevOps release dashboard
 
 In this task, you will create a dashboard and add to it release-related widgets.
 
-1.  In the Azure DevOps portal, in the vertical menu on the left side, click **Overview**, in the **Overview** section, click **Dashboards**, and click **Add a widget**.
-1.  On the **Add Widget** pane, scroll down through the list of widgets, select the **Deployment status** entry and click **Add**.
-1.  Use the procedure described in the previous step to add the **Release Health Details**, **Release Health Overview**, and **Release Pipeline Overview** widgets.
-1.  Use the mouse to drag the **Release Pipeline Overview** to the right of the **Deployment status** widget to avoid the need for scrolling vertically through the dashboard and click **Done Editing**.
-1.  Back on the dashboard pane, in the rectangle representing the **Deployment status** widget, click **Configure widget**. 
+1. In the Azure DevOps portal, in the vertical menu on the left side, click **Overview**, in the **Overview** section, click **Dashboards**, and click **Add a widget**.
+
+1. On the **Add Widget** pane, scroll down through the list of widgets, select the **Deployment status** entry and click **Add**.
+
+   ![lab10b_24](images/lab10b_24.png)
+
+   
+
+1. Use the procedure described in the previous step to add the **Release Health Details**, **Release Health Overview**, and **Release Pipeline Overview** widgets.
+
+1. Use the mouse to drag the **Release Pipeline Overview** to the right of the **Deployment status** widget to avoid the need for scrolling vertically through the dashboard and click **Done Editing**.
+
+1. Back on the dashboard pane, in the rectangle representing the **Deployment status** widget, click **Configure widget**. 
+
 1.  On the **Configuration** pane, specify the following settings (leave all others with their default values) and click **Save**.
 
     | Setting | Value |
@@ -139,21 +289,24 @@ In this task, you will create a dashboard and add to it release-related widgets.
     | Build pipeline | **az400m10l02 - CI** |
     | Linked release pipelines | **az400m10l02 - CD; az400m10l02 - CD\dev** |
 
-1.  Back on the dashboard pane, hover over the upper right corner of the rectangle representing the **Release Health Overview** widget to reveal the ellipsis sign representing the **More actions** menu, click it, and, in the dropdown menu, click **Configure**.  
+1. Back on the dashboard pane, hover over the upper right corner of the rectangle representing the **Release Health Overview** widget to reveal the ellipsis sign representing the **More actions** menu, click it, and, in the dropdown menu, click **Configure**.  
+
 1.  On the **Configuration** pane, specify the following settings (leave all others with their default values) and click **Save**.
 
     | Setting | Value |
     | ------- | ----- |
     | Select release definition(s) | **az400m10l02 - CD** |
 
-1.  Back on the dashboard pane, hover over the upper right corner of the rectangle representing the **Release Health Details** widget to reveal the ellipsis sign representing the **More actions** menu, click it, and, in the dropdown menu, click **Configure**.  
+1. Back on the dashboard pane, hover over the upper right corner of the rectangle representing the **Release Health Details** widget to reveal the ellipsis sign representing the **More actions** menu, click it, and, in the dropdown menu, click **Configure**.  
+
 1.  On the **Configuration** pane, specify the following settings (leave all others with their default values) and click **Save**.
 
     | Setting | Value |
     | ------- | ----- |
     | Definition | **az400m10l02 - CD** |
 
-1.  Back on the dashboard pane, hover over the upper right corner of the rectangle representing the **Release Pipeline Overview** widget to reveal the ellipsis sign representing the **More actions** menu, click it, and, in the dropdown menu, click **Configure**.  
+1. Back on the dashboard pane, hover over the upper right corner of the rectangle representing the **Release Pipeline Overview** widget to reveal the ellipsis sign representing the **More actions** menu, click it, and, in the dropdown menu, click **Configure**.  
+
 1.  On the **Configuration** pane, specify the following settings (leave all others with their default values) and click **Save**.
 
     | Setting | Value |
@@ -164,6 +317,26 @@ In this task, you will create a dashboard and add to it release-related widgets.
 
     > **Note**: The links on widgets allow you to navigate directly to the corresponding panes in the Azure DevOps portal.
 
+![lab10b_25](images/lab10b_25.png)
+
+
+
+Los widgets de Health me faltaban así que los busco en las extensiones del marketplace para Azure DevOps y las instalo en mi organización.
+
+![lab10b_25b](images/lab10b_25b.png)
+
+
+
+Ya están disponibles al volver a editar el dashboard.
+
+![lab10b_25c](images/lab10b_25c.png)
+
+
+
+![lab10b_25d](images/lab10b_25d.png)
+
+
+
 ### Exercise 2: Query release information via REST API
 
 In this exercise, you will query release information via REST API by using Postman.
@@ -172,20 +345,43 @@ In this exercise, you will query release information via REST API by using Pos
 
 In this task, you will generate an Azure DevOps personal access token that will be used to authenticate from the Postman app you will install in the next task of this exercise.
 
-1.  On the lab computer, in the web browser window displaying the Azure DevOps portal, in the upper right corner of the Azure DevOps page, click the **User settings** icon, in the dropdown menu, click **Personal access tokens**, on the **Personal Access Tokens** pane, and click **+ New Token**.
-1.  On the **Create a new personal access token** pane, click the **Show all scopes** link and, specify the following settings and click **Create** (leave all others with their default values):
+1. On the lab computer, in the web browser window displaying the Azure DevOps portal, in the upper right corner of the Azure DevOps page, click the **User settings** icon, in the dropdown menu, click **Personal access tokens**, on the **Personal Access Tokens** pane, and click **+ New Token**.
 
-    | Setting | Value |
-    | --- | --- |
-    | Name | **Creating a Release Dashboard lab** |
-    | Scope | **Release** |
-    | Permissions | **Read** |
-    | Scope | **Build** |
-    | Permissions | **Read** |
+   ![lab10b_26](images/lab10b_26.png)
 
-1.  On the **Success** pane, copy the value of the personal access token to Clipboard.
+   
 
-    > **Note**: Make sure you record the value of the token. You will not be able to retrieve it once you close this pane. 
+1. On the **Create a new personal access token** pane, click the **Show all scopes** link.
+
+   ![lab10b_27](images/lab10b_27.png)
+
+   
+
+   Specify the following settings and click **Create** (leave all others with their default values):
+
+   | Setting | Value |
+   | --- | --- |
+   | Name | **Creating a Release Dashboard lab** |
+   | Scope | <mark>**Release**</mark> |
+   | Permissions | **Read** |
+   | Scope | <mark>**Build**</mark> |
+   | Permissions | **Read** |
+
+   ![lab10b_28](images/lab10b_28.png)
+
+   
+
+   ![lab10b_29](images/lab10b_29.png)
+
+   
+
+1. On the **Success** pane, copy the value of the personal access token to Clipboard.
+
+   ![lab10b_30](images/lab10b_30.png)
+
+   `sl7nl6nollljvntyhwjb3zjstpuclcx2ju4mkgyilruffv4rdemq`
+
+   > **Note**: Make sure you record the value of the token. You will not be able to retrieve it once you close this pane. 
 
 1.  On the **Success** pane, click **Close**.
 
@@ -193,36 +389,91 @@ In this task, you will generate an Azure DevOps personal access token that will 
 
 In this task, you will query release information via REST API by using Postman.
 
-1.  On the lab computer, start a web browser and navigate to [the Postman download page](https://www.postman.com/downloads/), click **Download the App** button, in the dropdown menu, click **Windows 64-bit**, click the downloaded file and run the installation. Once the installation completes, the Postman desktop app will start automatically. 
+1. On the lab computer, start a web browser and navigate to [the Postman download page](https://www.postman.com/downloads/), click **Download the App** button, in the dropdown menu, click **Windows 64-bit**, click the downloaded file and run the installation. Once the installation completes, the Postman desktop app will start automatically. 
+
 1.  In the **Create Postman Account** pane, provide your email address, a username and password and click **Create free account**. 
 
     > **Note**: You will receive an email from Postman to activate your Postman account to complete the process of account provisioning.
 
-1.  Once you signed in, within the Postman desktop app window, in the upper left corner, click **+New**, on the **Create New** pane, click **Request**, in the **SAVE REQUEST** pane, in the **Request name** text box, type **Get-Releases**, click **+ Create Collection**, in the **Name your collection** text box, type **Azure DevOps az400m10l02 queries**, click the check mark on the right side, and then click the button **Save to Azure DevOps az400m10l02 queries**.
-1.  Open another web browser window and navigate to [the **Releases - List** Microsoft Docs page](https://docs.microsoft.com/en-us/rest/api/azure/devops/release/releases/list?view=azure-devops-rest-6.0) and review its content. 
-1.  Switch back to the Postman desktop app, in the Launchpad pane in the upper right section of the app window, click the **Authorization** tab header, in the **TYPE** dropdown list, select the **Basic Auth** entry and, in the **Password** textbox, paste the value of the token you copied in the previous task (do not set the value of the **Username** text box).
+1. Once you signed in, within the Postman desktop app window, in the upper left corner, click **+New**, on the **Create New** pane, click **Request**, in the **SAVE REQUEST** pane, in the **Request name** text box, type **Get-Releases**, click **+ Create Collection**, in the **Name your collection** text box, type **Azure DevOps az400m10l02 queries**, click the check mark on the right side, and then click the button **Save to Azure DevOps az400m10l02 queries**. He usado como nombre para la colección <mark>**Azure DevOps romanlopez queries**</mark>.
+
+   ![lab10b_31](images/lab10b_31.png)
+
+   
+
+   ![lab10b_32](images/lab10b_32.png)
+
+   
+
+   ### ATENCIÓN
+
+   > A partir de aquí importamos un par de ficheros que nos facilitó Billy para tener el entorno DevOps y una colección de queries. Ver la grabación de la clase a partir de las 10:30 del día 22 de julio de 2021 para más información.
+   >
+   > Realmente también funciona sin necesidad de importar un entorno. Al crear una Request hay que proporcionar la URL para el GET y en la pestaña Authorization de la Request añadir el Token.
+
+   
+
+1. Open another web browser window and navigate to [the **Releases - List** Microsoft Docs page](https://docs.microsoft.com/en-us/rest/api/azure/devops/release/releases/list?view=azure-devops-rest-6.0) and review its content. 
+
+1. Switch back to the Postman desktop app, in the Launchpad pane in the upper right section of the app window, click the **Authorization** tab header, in the **TYPE** dropdown list, select the **Basic Auth** entry and, in the **Password** textbox, paste the value of the token you copied in the previous task (do not set the value of the **Username** text box).
+
+   ![lab10b_33](images/lab10b_33.png)
+
+   
+
 1. In the Launchpad pane in the upper right section of the app window, ensure that **GET** appears in the dropdown list, in the **Enter request URL** textbox, type the following and click **Send** (replace the value of the `<organization_name>` with the name of your Azure DevOps organization) in order to list all releases:
 
    ```url
    https://vsrm.dev.azure.com/<organization_name>/Creating%20a%20Release%20Dashboard/_apis/release/releases?api-version=6.0
    ```
 
-1.  Review the output listed on the **Body** tab in the lower right section of the app window and verify that it includes the listing of the releases you created in the previous exercise of this lab.
-1.  Switch to the web browser window displaying the content of Microsoft Docs and navigate to [the **Deployments - List** Microsoft Docs page](https://docs.microsoft.com/en-us/rest/api/azure/devops/release/deployments/list?view=azure-devops-rest-6.0) and review its content. 
+   ![lab10b_35](images/lab10b_35.png)
+
+   
+
+1. Review the output listed on the **Body** tab in the lower right section of the app window and verify that it includes the listing of the releases you created in the previous exercise of this lab.
+
+1. Switch to the web browser window displaying the content of Microsoft Docs and navigate to [the **Deployments - List** Microsoft Docs page](https://docs.microsoft.com/en-us/rest/api/azure/devops/release/deployments/list?view=azure-devops-rest-6.0) and review its content. 
+
 1. In the Launchpad pane in the upper right section of the app window, ensure that **GET** appears in the dropdown list, in the **Enter request URL** textbox, type the following and click **Send** (replace the value of the `<organization_name>` with the name of your Azure DevOps organization) in order to list all deployments:
 
    ```url
    https://vsrm.dev.azure.com/<organization_name>/Creating%20a%20Release%20Dashboard/_apis/release/deployments?api-version=6.0
    ```
 
-1.  Review the output listed on the **Body** tab in the lower right section of the app window and verify that it includes the listing of the deployments you initiated in the previous exercise of this lab.
+1. Review the output listed on the **Body** tab in the lower right section of the app window and verify that it includes the listing of the deployments you initiated in the previous exercise of this lab.
+
+   ![lab10b_35](images/lab10b_35.png)
+
+   
+
 1. In the Launchpad pane in the upper right section of the app window, ensure that **GET** appears in the dropdown list, in the **Enter request URL** textbox, type the following and click **Send** (replace the value of the `<organization_name>` with the name of your Azure DevOps organization) in order to list all deployments:
 
-   ```url
-   https://vsrm.dev.azure.com/<organization_name>/Creating%20a%20Release%20Dashboard/_apis/release/deployments?DeploymentStatus=failed&api-version=6.0
-   ```
+    ```url
+    https://vsrm.dev.azure.com/<organization_name>/Creating%20a%20Release%20Dashboard/_apis/release/deployments?DeploymentStatus=failed&api-version=6.0
+    ```
 
-1.  Review the output listed on the **Body** tab in the lower right section of the app window and verify that it includes only the failed deployment you initiated in the previous exercise of this lab.
+1. Review the output listed on the **Body** tab in the lower right section of the app window and verify that it includes only the failed deployment you initiated in the previous exercise of this lab.
+
+   Efectivamente sólo contiene información de la **Release-3** que es la que falló.
+
+   ![lab10b_36](images/lab10b_36.png)
+
+
+
+El mensaje de error de la Release-3 es el siguiente:
+
+![lab10b_37](images/lab10b_37.png)
+
+Corregimos el error de acuerdo al contenido del mensaje y click en **Commit**.
+
+![lab10b_38](images/lab10b_38.png)
+
+
+
+![lab10b_39](images/lab10b_39.png)
+
+
 
 ### Exercise 3: Remove the Azure lab resources
 

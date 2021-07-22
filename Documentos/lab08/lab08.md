@@ -44,7 +44,7 @@ If you don't already have a GitHub account that you can use for this lab, follow
 
 ### Exercise 1 : Create a DevOps Starter project
 
-In this exercise, you will use DevOps Starter to facilitate provisioning of a number of resources, including: 
+<a name="create_devops_starterproject"></a>In this exercise, you will use DevOps Starter to facilitate provisioning of a number of resources, including: 
 
 -  A GitHub repository hosting:
 
