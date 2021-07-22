@@ -51,7 +51,7 @@ If you don't already have an Azure DevOps organization that you can use for this
 
 - Verify that you have a Microsoft account or an Azure AD account with the Owner role in the Azure subscription. For details, refer to [List Azure role assignments using the Azure portal](https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-list-portal).
 
-  <mark>En el [Lab 07](../lab07/lab07.md) explico como asignar el role de Owner a mi cuenta</mark>. 
+  <mark>En el [Lab 07](../lab07/lab07.md#role_owner) explico como asignar el role de Owner a mi cuenta</mark>. 
 
 ### Exercise 1: Create a release dashboard
 
