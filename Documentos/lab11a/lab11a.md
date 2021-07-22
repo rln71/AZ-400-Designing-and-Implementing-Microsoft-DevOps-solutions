@@ -1,9 +1,3 @@
----
-lab:
-    title: 'Lab 11a: Configuring Pipelines as Code with YAML'
-    module: 'Module 11: Implementing Continuous Deployment using Azure Pipelines'
----
-
 # Lab 11a: Configuring Pipelines as Code with YAML
 # Student lab manual
 
@@ -515,6 +509,12 @@ In this task, you will use Azure Cloud Shell to remove the Azure resources provi
     ```
 
     >**Note**: The command executes asynchronously (as determined by the --nowait parameter), so while you will be able to run another Azure CLI command immediately afterwards within the same Bash session, it will take a few minutes before the resource groups are actually removed.
+
+
+
+![lab11a_31](images/lab11a_31.png)
+
+
 
 ## Review
 
