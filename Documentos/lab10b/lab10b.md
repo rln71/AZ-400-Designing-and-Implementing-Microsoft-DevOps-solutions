@@ -1,9 +1,3 @@
----
-lab:
-    title: 'Lab 10b: Creating a Release Dashboard'
-    module: 'Module 10: Designing a Release Strategy'
----
-
 # Lab 10b: Creating a Release Dashboard
 # Student lab manual
 
@@ -74,6 +68,12 @@ In this task, you will create an Azure DevOps Starter resource in your Azure sub
    
 
 1. On the **DevOps Starter** blade, on the **Choose an application framework** pane, select the **ASP<nolink>.NET Core** tile, move the **Add a database** slider to the <mark>**On**</mark> position, and click **Next: Service >**. 
+
+   ### <mark>Atención</mark>
+
+   > Por descuido escogí la opción ASP.NET en vez de ASP.NET Core como reza el enunciado, pero la práctica se desarrolla igual salvo la ruta de acceso al archivo que se edita más adelante.
+
+   
 
    ![lab10b_02](images/lab10b_02.png)
 
