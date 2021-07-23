@@ -86,18 +86,31 @@ In this exercise, you will configure feature flags in Azure DevOps by using Laun
 
 In this task, you will create a feature flag in LaunchDarkly
 
-1.  From your lab computer, start a web browser, navigate to the [LaunchDarkly web site](https://app.launchdarkly.com/), and sign in using your account. Your browser session will be redirected to the **Default Project** portal where you can create a feature flag. 
-1.  In the LaunchDarkly portal, in the vertical menu bar on the left, click **Feature flags**.
-1.  On the **Feature flags** pane, click **+ FLAG**.
+1. From your lab computer, start a web browser, navigate to the [LaunchDarkly web site](https://app.launchdarkly.com/), and sign in using your account. Your browser session will be redirected to the **Default Project** portal where you can create a feature flag. 
+
+   ![](images/lab12_01.png)
+
+   
+
+1. In the LaunchDarkly portal, in the vertical menu bar on the left, click **Feature flags**.
+
+1. On the **Feature flags** pane, click **+ FLAG**.
+
 1.  On the **Create a feature flag** pane, in the **Name** text box, type **Member portal** and click the **SAVE FLAG** button.
 
     > **Note**: You've created a flag named **Member Portal**. Let's assume that you want to use this flag to determine the visibility of the **Member Portal** feature in your ASP.NET MVC web app. 
 
     > **Note**: To integrate LaunchDarkly into your application, you need an SDK key. 
 
-1.  In the LaunchDarkly portal, in the vertical menu bar on the left, click **Account settings**. 
+1. In the LaunchDarkly portal, in the vertical menu bar on the left, click **Account settings**. 
 
-    > **Note**: On the **Account settings** pane, you will find two predefined environments: **production** and **test**.  You can use the production environment SDK key for this project. 
+   > **Note**: On the **Account settings** pane, you will find two predefined environments: **production** and **test**.  You can use the production environment SDK key for this project. 
+
+   > Aprovecho y en el <mark>nombre de la organización</mark> pongo el mismo que tengo en Azure no vaya a ser que más adelante sea una fuente de conflicto.
+
+   ![](images/lab12_02.png)
+
+   
 
 1.  Copy the SDK key for the production environment and paste it into Notepad. You will need it later in this lab.
 
@@ -258,7 +271,7 @@ In this task, you will configure automatic roll out of the LaunchDarkly feature 
 1.  On the Parts Unlimited web page, verify that the **Member Portal** feature is enabled.
 
 > **Note**: LaunchDarkly offers a number of other features, including:
-    
+
 - **User Targeting**: LaunchDarkly targeting lets you turn features on or off for individual users or groups of users. You can use it to roll features out for internal testing, private betas, or usability tests before performing a broader rollout. 
 - **Custom targeting rules**: In addition to targeting individual users, LaunchDarkly allows you to target segments of users by constructing custom rules. In other words, you can create custom rules to target users based on any attributes you specify. 
 - **Projects and environments to manage your development process**: [Projects](https://docs.launchdarkly.com/docs/projects) allow you to manage multiple different software projects under one LaunchDarkly account. [Environments](https://docs.launchdarkly.com/docs/environments) allow you to manage your feature flags throughout your entire development lifecycle — from local development to QA, staging, and production. 

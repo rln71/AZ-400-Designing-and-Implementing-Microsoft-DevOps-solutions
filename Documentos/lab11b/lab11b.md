@@ -370,6 +370,11 @@ In this task, you will use Azure Cloud Shell to remove the Azure resources provi
     >**Note**: The command executes asynchronously (as determined by the --nowait parameter), so while you will be able to run another Azure CLI command immediately afterwards within the same Bash session, it will take a few minutes before the resource groups are actually removed.
 
 
+
+![](images/lab11b_24.png)
+
+
+
 ## Review
 
 In this lab, you learned how to execute Selenium test cases on a C# web application, as part of the Azure DevOps Release pipeline.
