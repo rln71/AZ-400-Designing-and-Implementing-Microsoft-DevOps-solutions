@@ -440,7 +440,7 @@ In this task, you will configure automatic roll out of the LaunchDarkly feature 
 
     
 
-    <mark>**ATENCIÓN**</mark>: dió error en el rollout. Ver el [log](images/tasklog_7.log). El origen del error se explica en el paso 24. Es porque utilicé como nombre del proyecto el que venía en el enunciado cuando en realidad yo estoy usando otro diferente. Corregí el nombre del proyecto y creé una nueva release que ya sí terminó bien.
+    <mark>**ATENCIÓN**</mark>: dió error en el rollout. Ver el [log](images/tasklog_7.log) aunque en realidad no informa sobre la causa real del problema. El origen del error se explica en el paso 24. Es porque utilicé como nombre del proyecto el que venía en el enunciado cuando en realidad yo estoy usando otro diferente. Corregí el nombre del proyecto y creé una nueva release que ya sí terminó bien.
 
     ![](images/lab12_36.png)
 
