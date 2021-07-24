@@ -1,0 +1,23 @@
+2021-07-23T15:15:02.9958244Z ##[section]Starting: LaunchDarkly Rollout
+2021-07-23T15:15:03.0341944Z ==============================================================================
+2021-07-23T15:15:03.0342404Z Task         : LaunchDarkly Rollout
+2021-07-23T15:15:03.0342753Z Description  : Automatically update rollout of your feature flags during release
+2021-07-23T15:15:03.0343116Z Version      : 3.0.4
+2021-07-23T15:15:03.0343355Z Author       : LaunchDarkly
+2021-07-23T15:15:03.0344374Z Help         : [More information](https://docs.launchdarkly.com/docs/targeting-users)
+2021-07-23T15:15:03.0344872Z ==============================================================================
+2021-07-23T15:15:03.3701540Z ba3da61e-97e2-4cb3-b4d2-b8839bf10c4c exists true
+2021-07-23T15:15:03.4791425Z (node:3456) Warning: Use Cipheriv for counter mode of aes-256-ctr
+2021-07-23T15:15:03.4792957Z (node:3456) Warning: Use Cipheriv for counter mode of aes-256-ctr
+2021-07-23T15:15:03.4800413Z (node:3456) Warning: Use Cipheriv for counter mode of aes-256-ctr
+2021-07-23T15:15:03.4801164Z (node:3456) Warning: Use Cipheriv for counter mode of aes-256-ctr
+2021-07-23T15:15:03.4801699Z (node:3456) Warning: Use Cipheriv for counter mode of aes-256-ctr
+2021-07-23T15:15:03.4802240Z (node:3456) Warning: Use Cipheriv for counter mode of aes-256-ctr
+2021-07-23T15:15:03.4802755Z (node:3456) Warning: Use Cipheriv for counter mode of aes-256-ctr
+2021-07-23T15:15:03.4803249Z (node:3456) Warning: Use Cipheriv for counter mode of aes-256-ctr
+2021-07-23T15:15:03.4803754Z (node:3456) Warning: Use Cipheriv for counter mode of aes-256-ctr
+2021-07-23T15:15:04.1321192Z Failed to retrieve work items. Double check your release variables.
+2021-07-23T15:15:04.1370635Z Failed to roll out feature flags: TypeError: Cannot read property 'length' of undefined
+2021-07-23T15:15:04.1371421Z     at D:\a\_tasks\Rollout_cc77dce8-9bc2-4bd0-b8bb-2e252dbdd7d0\3.0.4\index.js:182:15
+2021-07-23T15:15:04.1372022Z     at process._tickCallback (internal/process/next_tick.js:109:7)
+2021-07-23T15:15:04.1376192Z ##[section]Finishing: LaunchDarkly Rollout
