@@ -291,7 +291,7 @@ In this task, you will integrate LaunchDarkly in your Web application.
 
 1. In the Visual Studio window, switch to the **Git Changes** pane, in the **Enter a message** textbox, type **Integated LaunchDarkly #<work\_item\_ID>**, where **<work\_item\_ID>** represents the ID you noted earlier, click the down-pointing arrow head next to the **Commit All** button, and, in the dropdown list, click **Commit All and Push**. 
 
-   Si hiciera cambios más adelante tendría que pulsar en el botón Push ya que el combobox estará desactivado.
+   Si hiciera cambios más adelante para otras versiones, tendría que pulsar en el botón **Push** ya que el combobox estará desactivado. (No es así; el combobox para el Commit All se activa si cambio algo en el código aunque sea un espacio en blanco).
 
    ![](images/lab12_21.png)
    
@@ -486,3 +486,4 @@ In this task, you will use the Azure portal to remove the Azure resources provis
 
 In this lab, you learned how to optimize management of feature flags in Azure DevOps by leveraging LaunchDarkly. 
 
+ 
