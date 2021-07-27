@@ -545,7 +545,7 @@ In this task, you will modify the main template to account for remaining depende
 
 1. When prompted to provide the value for 'adminPassword', type **Pa55w.rd1234** and press the **Enter** key.
 
-   <mark>**Atención**</mark>: el despliegue se realizó correctamente pero el último comando no lo ejecuté desde el Bash sino desde **PowerShell**. La primera vez que realicé el laboratorio ese último comando lo ejecuté en el **Bash** como reza el enunciado y me daba un error; no sé si porque los cambios en la plantilla azuredeploy.json no los grabé antes del upload a Azure (que puede ser por descuido) o porque lo ejecuté desde el Bash (esto último me extraña mucho). El caso es que esta vez el laboratorio ha terminado bien, creando todos los recursos.
+   <mark>**Atención**</mark>: el despliegue se realizó correctamente pero el último comando no lo ejecuté desde el Bash sino desde **PowerShell**. La primera vez que realicé el laboratorio ese último comando lo ejecuté en el **Bash** como reza el enunciado y me daba un error; no creo que tenga que ver la consola desde la que se ejecutó el comando sino más bien que no grabé los cambios en la plantilla azuredeploy.json por descuido. El caso es que esta vez el laboratorio ha terminado bien, creando todos los recursos.
 
    ![](images/lab13_18.png)
 
