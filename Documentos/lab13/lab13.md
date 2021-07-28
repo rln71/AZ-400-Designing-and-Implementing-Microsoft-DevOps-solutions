@@ -545,9 +545,17 @@ In this task, you will modify the main template to account for remaining depende
 
 1. When prompted to provide the value for 'adminPassword', type **Pa55w.rd1234** and press the **Enter** key.
 
-   <mark>**Atención**</mark>: el despliegue se realizó correctamente pero el último comando no lo ejecuté desde el Bash sino desde **PowerShell**. La primera vez que realicé el laboratorio ese último comando lo ejecuté en el **Bash** como reza el enunciado y me daba un error; no creo que tenga que ver la consola desde la que se ejecutó el comando sino más bien que no grabé los cambios en la plantilla azuredeploy.json por descuido. El caso es que esta vez el laboratorio ha terminado bien, creando todos los recursos.
+   <mark>**Atención**</mark>: este laboratorio lo realicé una primera vez siguiendo al pie de la letra el enunciado, y escribiendo los comandos uno a uno desde la consola **Bash** pero el último comando terminaba con el error que muestro en la imagen. No sé si me equivoqué en el copy+paste de alguno de los comandos, o que no grabara por descuido todos los cambios en el json antes del upload a Azure.
+
+   ![](images/lab13_15b.png)
+
+   
+
+   <mark>**Atención**</mark>: repito el laboratorio borrando antes todos los recursos creados en el intento anterior. Reutilizo las plantillas json que ya tenía, actualizando únicamente el SAS Token en el fichero azuredeploy.json como se explica en el paso 3 Task 4. Ejecuto todos los comandos en la PowerShell desde un **fichero ps1** como explico en el paso 5 de la Task 3. Me aseguro de grabar los cambios en el json antes del upload. Y el último comando que hace el despliegue - que ejecuto desde el **PowerShell** en vez del Bash como reza el enunciado - finaliza correctamente.
 
    ![](images/lab13_18.png)
+
+   
 
 1.  If you receive errors when running the above command to deploy the template, try the following:
 
@@ -583,7 +591,7 @@ In this task, you will use Azure Cloud Shell to remove the Azure resources provi
 
     >**Note**: The command executes asynchronously (as determined by the --nowait parameter), so while you will be able to run another Azure CLI command immediately afterwards within the same Bash session, it will take a few minutes before the resource groups are actually removed.
 
-Los comandos de borrado los ejecuto desde el PowerShell en vez desde el Bash y funciona igual.
+Los comandos de borrado los ejecuto desde el PowerShell en vez del Bash y funciona igual.
 
 ![](images/lab13_19.png)
 
