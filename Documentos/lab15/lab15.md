@@ -158,7 +158,17 @@ In this task, you will use Azure Cloud Shell to create Azure resources required 
    
     Lo ejecuto mediante un fichero de comandos **[connection.sh](connection.sh)** donde proporciono el valor de las variables consultando directamente los nombres de los recursos de Azure. El valor de las variables se puede consultar con echo $<nombre_variable> pero sólo en su ámbito, que es dentro del fichero. Las variables creadas y asignadas dentro del fichero sólo se pueden consultar con comandos dentro del fichero, y no fuera en la consola, aunque siga estando en la misma sesión de Linux.
     
-
+   
+   
+   ```
+   CONNECTION_STRING="Data Source=tcp:$SQLDB_SRV_NAME.database.windows.net,1433;Initial Catalog=$SQLDB_NAME;User Id=sqladmin;Password=Pa55w.rd1234;"
+   
+   az webapp config connection-string set --name $WEB_APP_NAME --resource-group $RG_NAME --connection-string-type SQLAzure --settings defaultConnection="$CONNECTION_STRING"
+   ```
+   
+   
+   
+   
    ![](images/lab15_05.png)
    
    
