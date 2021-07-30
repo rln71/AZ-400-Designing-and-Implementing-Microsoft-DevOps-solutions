@@ -77,7 +77,7 @@ In this task, you will use Azure DevOps Demo Generator to generate a new project
 
    ![](images/lab15_02.png)
 
-   
+   <mark>**Atención**</mark>: el proyecto lo llamé 16_Docker_Containers en vez de 15_Docker_Containers como correspondería según la secuencia que estoy siguiendo, aunque no tiene mayor importancia para realizar el laboratorio.
 
 #### Task 2: Create Azure resources
 
@@ -156,23 +156,23 @@ In this task, you will use Azure Cloud Shell to create Azure resources required 
 
 1.  Run the following to configure a connection string of the newly created Azure web app (replace the $SQLDB_SRV_NAME and $SQLDB_NAME placeholders with the values of the names of the Azure SQL Database logical server and its database instance, respectively):
    
-    Lo ejecuto mediante un fichero de comandos **[connection.sh](connection.sh)** donde proporciono el valor de las variables consultando directamente los nombres de los recursos de Azure. El valor de las variables se puede consultar con echo $<nombre_variable> pero sólo en su ámbito, que es dentro del fichero. Las variables creadas y asignadas dentro del fichero sólo se pueden consultar con comandos dentro del fichero, y no fuera en la consola, aunque siga estando en la misma sesión de Linux.
+    Lo ejecuto mediante un fichero de comandos **[connection.sh](connection.sh)** donde proporciono el valor de las variables consultando directamente los nombres de los recursos de Azure. El valor de las variables se puede consultar con `echo $<nombre_variable>` pero sólo en su ámbito, que es dentro del fichero. Las variables creadas y asignadas dentro del fichero sólo se pueden consultar con comandos dentro del fichero, y no fuera en la consola, aunque siga estando en la misma sesión de Linux.
     
-   
-   
+
+
    ```
    CONNECTION_STRING="Data Source=tcp:$SQLDB_SRV_NAME.database.windows.net,1433;Initial Catalog=$SQLDB_NAME;User Id=sqladmin;Password=Pa55w.rd1234;"
    
    az webapp config connection-string set --name $WEB_APP_NAME --resource-group $RG_NAME --connection-string-type SQLAzure --settings defaultConnection="$CONNECTION_STRING"
    ```
+
    
-   
-   
-   
+
+
    ![](images/lab15_05.png)
+
    
-   
-   
+
 1. In the web browser displaying the Azure portal, close the Cloud Shell pane, navigate to the **Resource groups** blade, and, on the **Resource groups** blade, select the **az400m1501a-RG** entry.
 
 1.  On the **az400m1501a-RG** resource group blade, review the listing of its resources. 
@@ -350,7 +350,7 @@ In this exercise, you will trigger the build and release pipelines by using code
 
    ![](images/lab15_15.png)
 
-   Vuelvo a editar el fichero Index.cshtml y tras el commit en el editor, se ejecutan automáticamente la Pipeline y después la Release.
+   Vuelvo a editar el fichero Index.cshtml y tras el commit en el editor, se ejecutan automáticamente la Pipeline y después la Release para transportar los cambios a la webapp.
 
    ![](images/lab15_16.png)
 
